@@ -1,0 +1,383 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background: url(/assets/bg-team.jpg) rgba(255, 255, 255, 0.8);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: overlay;
+}
+
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  background-color: #fed823;
+  border-radius: 40px;
+  border: 2px solid transparent;
+  padding: 15px 30px;
+  display: inline-block;
+  margin-bottom: 20px;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  background-color: transparent;
+  border-color: #fed823;
+  color: #fed823;
+}
+
+section {
+  padding: 80px 0;
+}
+
+h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #0f9acc;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 30px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+/* header section */
+header {
+  padding: 40px 0;
+  background-color: #17283f;
+}
+
+.header-parent-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.austin-logo {
+  height: 80px;
+  width: 200px;
+  border-radius: 8px;
+}
+
+li {
+  list-style: none;
+}
+
+.nav-btn {
+  font-size: 20px;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: white;
+  transition: 0.5s;
+}
+
+.nav-btn:hover {
+  color: #0f9acc;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+/* big banner section */
+.big-banner {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(/assets/big-banner.jpeg) rgba(0, 0, 0, 0.6);
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+  position: relative;
+}
+.textbox {
+  max-width: 500px;
+  text-align: center;
+}
+
+.textbox h1 {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.textbox h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 30px;
+}
+
+/* about section */
+.about {
+  position: relative;
+}
+
+.bg-decoration {
+  background: white;
+  height: 600px;
+  width: 80%;
+  position: absolute;
+  top: -30%;
+  right: -20%;
+  transform: rotate(145deg);
+  z-index: -1;
+}
+
+.about-flex {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-flex-left {
+  background: url(/assets/cleaner1.jpeg);
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  width: 50%;
+  border-radius: 8px;
+}
+
+.about-flex-right {
+  width: 50%;
+}
+
+.about-flex p {
+  font-size: 18px;
+  line-height: 30px;
+}
+
+/* our services section */
+.services {
+  /* background: rgba(255, 255, 255, 0.4); */
+  background-blend-mode: overlay;
+}
+
+.item1 {
+  background: url(/assets/janitor-service.jpeg);
+}
+
+.item2 {
+  background: url(/assets/carpet-cleaning.webp);
+}
+
+.item3 {
+  background: url(/assets/sofa-cleaning.jpeg);
+}
+
+.item4 {
+  background: url(/assets/total-cleaning.jpeg);
+}
+
+.item5 {
+  background: url(/assets/grocery-cleaning.jpeg);
+}
+
+.item6 {
+  background: url(/assets/window-washing.jpeg);
+}
+
+.item7 {
+  background: url(/assets/wall-cleaning.jpeg);
+}
+
+.item8 {
+  background: url(/assets/floorcare.jpeg);
+}
+
+.item9 {
+  background: url(/assets/emergency.webp);
+}
+
+.item10 {
+  background: url(/assets/pressure.jpeg);
+}
+
+.item11 {
+  background: url(/assets/garage-cleaning.jpeg);
+}
+
+.item12 {
+  background: url(/assets/epoxy.jpeg);
+}
+
+.item {
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  position: relative;
+  transition: 1.5s;
+}
+
+.services .slick-slide {
+  margin: 0 5px;
+}
+
+.services .slick-list {
+  margin: 0 -5px;
+}
+
+.services .slick-dots {
+  display: flex;
+  position: absolute;
+  top: calc(100% + 20px);
+  left: 50%;
+  transform: translateX(-50%);
+  gap: 8px;
+}
+
+.services .slick-dots li button {
+  width: 20px;
+  height: 10px;
+  border-radius: 4px;
+  font-size: 0;
+  border: none;
+  background-color: #0f9acc;
+  opacity: 0.5;
+}
+
+.services .slick-dots li.slick-active button {
+  background-color: #17283f;
+}
+
+.text-hover {
+  background-color: #fed823;
+  position: absolute;
+  padding: 20px;
+  bottom: -120px;
+  left: 0;
+  width: 100%;
+  transition: 1s;
+}
+.item:hover .text-hover {
+  /* animation: 1s texthover ease-in-out; */
+  transform: translateY(-120px);
+}
+/* 
+@keyframes texthover {
+ 100% {
+  transform: translate
+  }
+} */
+
+/* cards section why us */
+.why-us {
+  text-align: center;
+  background: rgba(255, 255, 255, 1);
+}
+
+.why-use-flex {
+  display: flex;
+  gap: 30px;
+}
+
+.cards {
+  position: relative;
+  width: calc(100% - 60px) / 3;
+  text-align: center;
+}
+
+.cards img {
+  display: block;
+  height: 100px;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: -10px;
+  background-color: white;
+}
+
+.water {
+  width: 100px;
+  height: 100px;
+  padding: 15px;
+  background: linear-gradient(45deg / #00ffb6 0%, #000fa3 100%);
+  box-shadow: 0 0 5px #000;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  transition: 1s;
+  margin-bottom: 5px;
+  opacity: 0.2;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
+.water-0 {
+  background-color: aquamarine;
+}
+
+.water-1 {
+  background-color: #fed823;
+}
+
+.water-2 {
+  background-color: #0f9acc;
+}
+
+.cards:hover .water {
+  transform: translateX(-50px) scale(2.5);
+}
+
+.review-wave {
+  width: 100%;
+  min-height: 500px;
+}
+
+.review {
+  position: relative;
+  background: #17283f;
+}
+
+.review-wave {
+  background: url(/assets/wave.webp);
+  background-blend-mode: overlay;
+  position: absolute;
+  top: -28%;
+  width: 100%;
+  height: 50px;
+  background-position: center;
+  background-size: cover;
+  margin-top: 40px;
+}
+
+.review .slick-slide {
+  margin: 0 5px;
+}
+
+.review .slick-list {
+  margin: 0 -5px;
+}
+
+.review .item {
+  border: 2px solid green;
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  position: relative;
+  color: white;
+}
+
+/* .item-text {
+  z-index: 9999;
+} */
