@@ -53,7 +53,7 @@ h3 {
 h2 {
   font-size: 30px;
   text-transform: capitalize;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 /* header section */
 header {
@@ -107,23 +107,25 @@ li {
   background-blend-mode: overlay;
   position: relative;
 }
+
 .textbox {
-  max-width: 500px;
+  max-width: 1000px;
   text-align: center;
 }
 
 .textbox h1 {
   font-size: 20px;
   text-transform: uppercase;
-  color: white;
-  margin-bottom: 30px;
+  color: #0f9acc;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
 }
 
 .textbox h2 {
-  font-size: 30px;
+  font-size: 80px;
   text-transform: uppercase;
   color: white;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 /* about section */
@@ -164,6 +166,7 @@ li {
 .about-flex p {
   font-size: 18px;
   line-height: 30px;
+  margin-bottom: 10px;
 }
 
 /* our services section */
@@ -349,6 +352,7 @@ li {
 .review {
   position: relative;
   background: #17283f;
+  padding: 100px 0px;
 }
 
 .review-wave {
@@ -375,7 +379,7 @@ li {
   border: 2px solid green;
   background-size: cover;
   background-position: center;
-  height: 200px;
+  height: 220px;
   position: relative;
   color: white;
 }
@@ -422,6 +426,51 @@ li {
   left: calc(100% + 5px);
 }
 
-/* .item-text {
-  z-index: 9999;
-} */
+.review .item-text {
+  text-align: center;
+  line-height: 1.5;
+}
+
+.review .item-text p {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.review .item-text h4 {
+  color: #fed823;
+}
+
+.review .item-text .ratings {
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+}
+
+.photo1 {
+  background: url(/assets/person1.avif);
+}
+
+.photo2 {
+  background: url(/assets/person2.png);
+}
+
+.photo3 {
+  background: url(/assets/person3.jpeg);
+}
+
+.photo4 {
+  background: url(/assets/person4.jpeg);
+}
+
+.photo5 {
+  background: url(/assets/person5.jpeg);
+}
