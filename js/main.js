@@ -35,7 +35,7 @@ $(".slider-review").slick({
   slidesToScroll: 1,
   autoplay: true,
   speed: 500,
-  arrows: false,
+  arrows: true,
   dots: false,
   responsive: [
     {

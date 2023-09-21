@@ -339,6 +339,8 @@ li {
   transform: translateX(-50px) scale(2.5);
 }
 
+/* review section */
+
 .review-wave {
   width: 100%;
   min-height: 500px;
@@ -376,6 +378,48 @@ li {
   height: 200px;
   position: relative;
   color: white;
+}
+
+.review .slick-arrow {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 40px;
+  font-size: 0;
+  background-color: #396eb9;
+  border: transparent;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  opacity: 0.2;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.review .slick-arrow:hover {
+  opacity: 1;
+  width: 55px;
+  height: 45px;
+}
+
+.review .slick-arrow:before {
+  content: "";
+  font-size: 0;
+  content: url(https://cdn-icons-png.flaticon.com/512/32/32213.png);
+  transform: translate(-50%, -50%) scale(0.04);
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.review .slick-prev {
+  right: calc(100% + 5px);
+  transform: translateY(-50%) scaleX(-1);
+}
+
+.review .slick-next {
+  left: calc(100% + 5px);
 }
 
 /* .item-text {
