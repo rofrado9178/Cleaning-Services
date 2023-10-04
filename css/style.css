@@ -58,7 +58,7 @@ h2 {
 /* header section */
 header {
   padding: 40px 0;
-  background-color: #17283f;
+  background-color: #18293f;
 }
 
 .header-parent-flex {
@@ -101,7 +101,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(/assets/big-banner.jpeg) rgba(0, 0, 0, 0.6);
+  background: url(/assets/big-banner.jpeg) rgba(255, 255, 255, 0.7);
   background-position: center;
   background-size: cover;
   background-blend-mode: overlay;
@@ -124,7 +124,7 @@ li {
 .textbox h2 {
   font-size: 80px;
   text-transform: uppercase;
-  color: white;
+  color: #17283f;
   margin-bottom: 50px;
 }
 
@@ -152,12 +152,17 @@ li {
 }
 
 .about-flex-left {
-  background: url(/assets/cleaner1.jpeg);
   background-position: center;
   background-size: cover;
   height: 500px;
   width: 50%;
   border-radius: 8px;
+}
+
+iframe {
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
 }
 
 .about-flex-right {
@@ -348,13 +353,15 @@ li {
 
 .review-wave {
   width: 100%;
-  min-height: 500px;
+  min-height: 600px;
+  /* border: 1px solid blue; */
 }
 
 .review {
   position: relative;
   background: #17283f;
   padding: 100px 0px;
+  /* border: 1px solid gold; */
 }
 
 .review-wave {
@@ -368,6 +375,7 @@ li {
   background-position: center;
   background-size: cover;
   margin-top: 40px;
+  /* border: 1px solid red; */
 }
 
 .review .slick-slide {
@@ -382,9 +390,10 @@ li {
   /* border: 2px solid green; */
   background-size: cover;
   background-position: center;
-  height: 350px;
+  min-height: 400px;
   position: relative;
   color: white;
+  text-align: center;
 }
 
 .review .slick-arrow {
@@ -430,9 +439,10 @@ li {
 }
 
 .review .item-text {
-  text-align: center;
   line-height: 1.5;
-  max-width: 300px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .review .item-text p {
@@ -486,9 +496,67 @@ li {
   background: url(/assets/person2.jpeg);
 }
 
+/* review ends here */
+
+/* our work start here */
+.our-work {
+  text-align: center;
+}
+
+.our-work .work-slide {
+  display: none;
+}
+
+.our-work .our-work-flex {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.our-work .img-1 {
+  background: url(/assets/pressure.jpeg);
+}
+
+.our-work .img-2 {
+  background: url(/assets/carpet-cleaning.webp);
+}
+
+.our-work .img-3 {
+  background: url(/assets/window-washing.jpeg);
+}
+
+.our-work .img-fancy {
+  height: 400px;
+  width: 400px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+  transition: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+
+.our-work .img-1:hover {
+  background: url(/assets/press-wash-before-after.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
+.our-work .img-2:hover {
+  background: url(/assets/carpet-before-after.webp);
+  background-position: center;
+  background-size: cover;
+}
+
+.our-work .img-3:hover {
+  background: url(/assets/window-before-after.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+
 /* career section */
 .career {
   padding: 80px 0;
+  background-color: white;
 }
 
 .career .career-title-flex {
@@ -503,6 +571,127 @@ li {
 }
 
 .career .career-flex .cards {
-  width: calc((100% - 80px) / 4);
+  width: calc((100% - 60px) / 4);
   border: 2px solid red;
+}
+
+.career .team-1 {
+  background: url(/assets/residential-team.jpeg);
+}
+
+.career .team-2 {
+  background: url(/assets/corporate-team.jpeg);
+}
+
+.career .team-3 {
+  background: url(/assets/outdoor-cleaner-team.jpeg);
+}
+
+.career .team-4 {
+  background: url(/assets/outdoor-cleaner.jpeg);
+}
+
+.career .career-cards-bg {
+  height: 400px;
+  background-position: center;
+  background-size: cover;
+}
+/* career section ends here */
+
+/* maps section starts here */
+.maps {
+  background-color: #18293f;
+}
+
+.maps .map-flex {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.maps .content-container {
+  width: 50%;
+}
+
+.maps .content-container img {
+  width: 200px;
+  height: 80px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.maps .text-content {
+  display: flex;
+  color: white;
+  gap: 50px;
+  color: white;
+  line-height: 1.5;
+}
+
+.maps h4 {
+  font-size: 24px;
+  text-transform: capitalize;
+  color: #0f9acc;
+}
+
+.maps p {
+  font-size: 20px;
+}
+
+.maps .address {
+  width: 50%;
+}
+
+.our-map {
+  width: 700px;
+  height: 400px;
+  border-radius: 8px;
+}
+
+.maps .newsletter {
+  width: 50%;
+}
+
+.maps .newsletter p {
+  margin-bottom: 10px;
+  max-width: 90%;
+}
+
+.maps .newsletter input {
+  padding: 10px 30px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid gray;
+  outline: none;
+  max-width: 90%;
+  font-size: 20px;
+  color: white;
+  position: relative;
+}
+
+.maps .newsletter button {
+  padding: 10px;
+  background: transparent;
+  border: none;
+  font-size: 25px;
+  position: absolute;
+  right: 7%;
+  color: #0f9acc;
+  transition: 0.5s;
+}
+
+.maps .newsletter button:hover {
+  color: gray;
+}
+
+/* maps ends here */
+
+/* footer starts here */
+footer {
+  font-size: 20px;
+  text-transform: capitalize;
+  padding: 20px 0;
+  background-color: #011127;
+  color: gray;
+  text-align: center;
 }
