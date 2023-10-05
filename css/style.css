@@ -11,6 +11,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-blend-mode: overlay;
+  max-width: 100vw;
 }
 
 .container {
@@ -34,13 +35,13 @@ body {
 }
 
 .btn:hover {
-  background-color: transparent;
-  border-color: #fed823;
-  color: #fed823;
+  background-color: #d5b307;
+  transform: scale(1.03);
 }
 
 section {
   padding: 80px 0;
+  min-width: 100vw;
 }
 
 h3 {
@@ -135,13 +136,13 @@ li {
 
 .bg-decoration {
   background: white;
-  height: 600px;
-  width: 80%;
+  height: 700px;
+  width: 550px;
   position: absolute;
-  top: -30%;
-  right: -20%;
+  top: -5%;
+  right: 15%;
   transform: rotate(145deg);
-  z-index: -1;
+  z-index: -999;
   border-radius: 8px;
 }
 
@@ -177,7 +178,6 @@ iframe {
 
 /* our services section */
 .services {
-  /* background: rgba(255, 255, 255, 0.4); */
   background-blend-mode: overlay;
 }
 
@@ -278,16 +278,14 @@ iframe {
   width: 100%;
   transition: 1s;
 }
+
+.text-hover h4 {
+  max-width: 70%;
+}
+
 .item:hover .text-hover {
-  /* animation: 1s texthover ease-in-out; */
   transform: translateY(-120px);
 }
-/* 
-@keyframes texthover {
- 100% {
-  transform: translate
-  }
-} */
 
 /* cards section why us */
 .why-us {
@@ -404,10 +402,10 @@ iframe {
   width: 45px;
   height: 40px;
   font-size: 0;
-  background-color: #396eb9;
+  background-color: #1c77f6;
   border: transparent;
   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  opacity: 0.4;
+  opacity: 0.6;
   cursor: pointer;
   transition: 0.4s;
 }
@@ -423,6 +421,7 @@ iframe {
   font-size: 0;
   content: url(https://cdn-icons-png.flaticon.com/512/32/32213.png);
   transform: translate(-50%, -50%) scale(0.04);
+  filter: invert(100%);
   display: block;
   position: absolute;
   top: 50%;
@@ -430,12 +429,12 @@ iframe {
 }
 
 .review .slick-prev {
-  right: calc(100% + 5px);
+  right: 100%;
   transform: translateY(-50%) scaleX(-1);
 }
 
 .review .slick-next {
-  left: calc(100% + 5px);
+  left: 100%;
 }
 
 .review .item-text {
@@ -533,6 +532,7 @@ iframe {
   border-radius: 8px;
   transition: 0.5s;
   transition-timing-function: ease-in-out;
+  box-shadow: 8px 6px 10px 5px gray;
 }
 
 .our-work .img-1:hover {
@@ -559,6 +559,10 @@ iframe {
   background-color: white;
 }
 
+.career .career-title-textarea {
+  margin-bottom: 10px;
+}
+
 .career .career-title-flex {
   display: flex;
   align-items: center;
@@ -567,35 +571,59 @@ iframe {
 
 .career .career-flex {
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
 .career .career-flex .cards {
   width: calc((100% - 60px) / 4);
-  border: 2px solid red;
+  box-shadow: 5px 4px 10px 2px gray;
+  border-radius: 8px 8px 0 0;
+  transition: 0.5s;
 }
 
-.career .team-1 {
+.career .cards:hover {
+  transform: scale(1.08);
+}
+
+.career .cards:nth-child(odd) {
+  margin-top: 40px;
+}
+
+.career .cards:nth-child(even) {
+  margin-bottom: 40px;
+}
+
+.career .cards .team-1 {
   background: url(/assets/residential-team.jpeg);
 }
 
-.career .team-2 {
+.career .cards .team-2 {
   background: url(/assets/corporate-team.jpeg);
 }
 
-.career .team-3 {
+.career .cards .team-3 {
   background: url(/assets/outdoor-cleaner-team.jpeg);
 }
 
-.career .team-4 {
+.career .cards .team-4 {
   background: url(/assets/outdoor-cleaner.jpeg);
 }
 
-.career .career-cards-bg {
-  height: 400px;
+.career .cards .career-cards-bg {
+  min-height: 400px;
   background-position: center;
   background-size: cover;
+  border-radius: 8px 8px 0 0;
 }
+
+.career .cards .career-cards-content {
+  padding: 10px 0;
+}
+
+.career .cards .career-cards-content h3 {
+  margin: 0;
+}
+
 /* career section ends here */
 
 /* maps section starts here */
@@ -674,7 +702,7 @@ iframe {
   background: transparent;
   border: none;
   font-size: 25px;
-  position: absolute;
+  margin-left: -30px;
   right: 7%;
   color: #0f9acc;
   transition: 0.5s;
@@ -694,4 +722,93 @@ footer {
   background-color: #011127;
   color: gray;
   text-align: center;
+}
+
+/* responsive section */
+@media only screen and (max-width: 1400px) {
+  .our-work .img-fancy {
+    height: 350px;
+    width: 350px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .about-flex {
+    flex-direction: column;
+  }
+
+  .about-flex-left {
+    width: 100%;
+  }
+
+  .about-flex-right {
+    width: 100%;
+    margin-right: auto;
+  }
+
+  .bg-decoration {
+    height: 800px;
+    width: 800px;
+    top: 47%;
+    left: 16%;
+    transform: rotate(45deg);
+  }
+
+  .our-work .img-fancy {
+    height: 300px;
+    width: 300px;
+  }
+
+  .career .career-flex {
+    flex-wrap: wrap;
+  }
+
+  .career .career-flex .cards {
+    width: calc((100% - 30px) / 2);
+  }
+
+  .maps .map-flex {
+    flex-direction: column;
+  }
+
+  .maps .content-container {
+    width: 70%;
+  }
+
+  .maps .content-container .logo-container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .maps .content-container .text-content {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (max-width: 1040px) {
+  .bg-decoration {
+    height: 650px;
+    width: 500px;
+    right: 16%;
+    top: 1%;
+  }
+
+  .our-work .img-fancy {
+    height: 250px;
+    width: 250px;
+  }
+
+  .maps .content-container {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  /* .our-work .img-fancy {
+    height: 250px;
+    width: 250px;
+  } */
 }

@@ -7,7 +7,7 @@ $(".slider-holder").slick({
   dots: true,
   responsive: [
     {
-      breakpoint: 900,
+      breakpoint: 1040,
       settings: {
         slidesToShow: 3,
       },
@@ -32,7 +32,7 @@ $(".slider-holder").slick({
 
 $(".slider-review").slick({
   infinite: true,
-  slidesToShow: 3,
+  slidesToShow: 4,
   slidesToScroll: 1,
   autoplay: true,
   speed: 500,
@@ -40,15 +40,17 @@ $(".slider-review").slick({
   dots: false,
   responsive: [
     {
-      breakpoint: 900,
+      breakpoint: 1040,
       settings: {
         slidesToShow: 3,
+        slidesToScroll: 1,
       },
     },
     {
       breakpoint: 700,
       settings: {
         slidesToShow: 2,
+        slidesToScroll: 1,
         dots: false,
       },
     },
@@ -56,6 +58,7 @@ $(".slider-review").slick({
       breakpoint: 550,
       settings: {
         slidesToShow: 1,
+        slidesToScroll: 1,
         dots: false,
       },
     },
