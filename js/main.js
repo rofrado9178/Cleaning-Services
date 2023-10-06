@@ -13,14 +13,14 @@ $(".slider-holder").slick({
       },
     },
     {
-      breakpoint: 700,
+      breakpoint: 730,
       settings: {
         slidesToShow: 2,
         dots: false,
       },
     },
     {
-      breakpoint: 550,
+      breakpoint: 580,
       settings: {
         slidesToShow: 1,
         dots: false,
@@ -47,7 +47,7 @@ $(".slider-review").slick({
       },
     },
     {
-      breakpoint: 700,
+      breakpoint: 730,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 1,
@@ -55,7 +55,7 @@ $(".slider-review").slick({
       },
     },
     {
-      breakpoint: 550,
+      breakpoint: 590,
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -63,4 +63,49 @@ $(".slider-review").slick({
       },
     },
   ],
+});
+
+//header responsive
+const scrollWindow = () => {
+  const scroll = $(window).scrollTop();
+
+  if (scroll >= 150) {
+    $(".hamburger").css("display", "block");
+  } else {
+    $(".hamburger").css("display", "none");
+  }
+};
+
+$(window).scroll(scrollWindow);
+
+$(".header-responsive").hide();
+
+$(".hamburger").on("click", () => {
+  $("header").hide("slow");
+  $(".header-responsive").show("slow");
+  $(".hamburger").hide("slow");
+  $("html, body").css({
+    overflow: "hidden",
+  });
+});
+
+$(".close").on("click", () => {
+  $("header").show("slow");
+  $(".header-responsive").hide("slow");
+  $(".hamburger").css("display", "block");
+  $("html, body").css({
+    overflow: "auto",
+  });
+});
+
+$(".quote").hide();
+
+$(".quote-me").on("click", (e) => {
+  e.preventDefault();
+  $(".quote").show("slow");
+  $(".quote").css("display", "flex");
+});
+
+$(".quote-close").on("click", () => {
+  $(".quote").hide("slow");
 });

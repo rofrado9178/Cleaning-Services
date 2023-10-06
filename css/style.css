@@ -56,6 +56,7 @@ h2 {
   text-transform: capitalize;
   margin-bottom: 15px;
 }
+
 /* header section */
 header {
   padding: 40px 0;
@@ -69,8 +70,8 @@ header {
 }
 
 .austin-logo {
-  height: 80px;
-  width: 200px;
+  height: 100px;
+  width: 250px;
   border-radius: 8px;
 }
 
@@ -96,13 +97,136 @@ li {
   gap: 20px;
 }
 
+/* header hamburger section responsive */
+
+.hamburger {
+  font-size: 40px;
+  position: fixed;
+  background-color: transparent;
+  border: 0;
+  color: #0f9acc;
+  top: 50px;
+  right: 50px;
+  z-index: 999999;
+  display: none;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.close-btn {
+  font-size: 40px;
+  position: absolute;
+  background-color: transparent;
+  border: 0;
+  color: #0f9acc;
+  top: 50px;
+  right: 50px;
+  z-index: 999999;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.hamburger:hover {
+  color: #fed823;
+}
+
+.close:hover {
+  color: #fed823;
+}
+
+.header-responsive {
+  background-color: #18293f;
+  padding: 60px 0;
+  min-height: 50vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: none;
+}
+
+.header-responsive .header-parent-flex {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.header-responsive .header-parent-flex .austin-logo {
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+.header-responsive .header-flex {
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.header-responsive .header-flex li {
+  padding: 10px 0;
+}
+
+.header-responsive .header-flex a {
+  font-size: 25px;
+}
+
+/* header ends here */
+
+/* popup quote starts here */
+
+.quote {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.quote form {
+  padding: 100px 0;
+  background: #0f9acc;
+  color: white;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.quote form label {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.quote form input {
+  font-size: 20px;
+  text-transform: capitalize;
+  display: block;
+  width: 80%;
+  padding: 10px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
 /* big banner section */
 .big-banner {
   min-height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(/assets/big-banner.jpeg) rgba(255, 255, 255, 0.7);
+  background: url(/assets/big-banner.jpeg) rgba(255, 255, 255, 0.6);
   background-position: center;
   background-size: cover;
   background-blend-mode: overlay;
@@ -238,6 +362,10 @@ iframe {
   border-radius: 8px;
 }
 
+.services .item {
+  box-shadow: 2px 3px 2px 2px gray;
+}
+
 .services .slick-slide {
   margin: 0 5px;
 }
@@ -293,7 +421,7 @@ iframe {
   background: rgba(255, 255, 255, 1);
 }
 
-.why-use-flex {
+.why-us-flex {
   display: flex;
   gap: 30px;
 }
@@ -747,10 +875,10 @@ footer {
   }
 
   .bg-decoration {
-    height: 800px;
-    width: 800px;
-    top: 47%;
-    left: 16%;
+    height: 700px;
+    width: 700px;
+    top: 50%;
+    left: 18%;
     transform: rotate(45deg);
   }
 
@@ -771,6 +899,10 @@ footer {
     flex-direction: column;
   }
 
+  .maps iframe {
+    width: 80%;
+  }
+
   .maps .content-container {
     width: 70%;
   }
@@ -789,11 +921,25 @@ footer {
 }
 
 @media only screen and (max-width: 1040px) {
+  section {
+    padding: 60px 0;
+  }
+
+  header {
+    padding: 20px 0;
+  }
+
+  .big-banner {
+    padding: 40px 0;
+  }
+
   .bg-decoration {
-    height: 650px;
-    width: 500px;
-    right: 16%;
-    top: 1%;
+    height: 600px;
+    width: 600px;
+  }
+
+  .why-us {
+    padding: 80px 0;
   }
 
   .our-work .img-fancy {
@@ -807,8 +953,172 @@ footer {
 }
 
 @media only screen and (max-width: 860px) {
-  /* .our-work .img-fancy {
+  header .header-flex {
+    display: none;
+  }
+
+  .austin-logo {
+    height: 80px;
+    width: 185px;
+  }
+
+  .hamburger {
+    display: block !important;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .bg-decoration {
+    height: 500px;
+    width: 500px;
+    left: 17%;
+  }
+
+  .our-work .img-fancy {
+    height: 200px;
+    width: 200px;
+  }
+
+  .maps .content-container .logo-container {
+    text-align: center;
+  }
+
+  .maps .text-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .maps .text-content .address {
+    width: 100%;
+  }
+
+  .maps .text-content .newsletter {
+    width: 100%;
+  }
+
+  .maps .text-content .newsletter input {
+    width: 50%;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 730px) {
+  .big-banner .textbox h2 {
+    font-size: 60px;
+  }
+
+  .bg-decoration {
+    height: 480px;
+    width: 400px;
+    left: 17%;
+  }
+
+  .our-work .our-work-flex {
+    flex-direction: column;
+  }
+
+  .our-work .img-fancy {
+    height: 300px;
+    width: 100%;
+  }
+
+  .maps .text-content .newsletter input {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  .austin-logo {
+    height: 50px;
+    width: 150px;
+  }
+
+  .hamburger {
+    top: 30px;
+  }
+
+  section {
+    padding: 40px 0;
+  }
+
+  .big-banner .textbox h1 {
+    font-size: 16px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .big-banner .textbox h2 {
+    font-size: 45px;
+  }
+
+  .bg-decoration {
+    height: 400px;
+    width: 300px;
+    left: 17%;
+    top: 55%;
+  }
+
+  .services .item {
+    height: 300px;
+  }
+
+  .why-us-flex {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .why-us-flex .cards {
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .review .slick-prev {
+    right: 55%;
+    top: 110%;
+    transform: translateY(-50%) scaleX(-1);
+  }
+
+  .review .slick-next {
+    left: 55%;
+    top: 110%;
+  }
+
+  .career .career-title-flex {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .career .career-flex {
+    flex-direction: column;
+  }
+
+  .career .career-flex .cards {
+    width: 100%;
+    margin: 0;
+  }
+
+  .maps .text-content .newsletter input {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  h2 {
+    font-size: 25px;
+  }
+
+  .bg-decoration {
+    display: none;
+  }
+
+  .about {
+    background-color: white;
+  }
+
+  .maps iframe {
     height: 250px;
-    width: 250px;
-  } */
+    width: 90%;
+  }
 }
