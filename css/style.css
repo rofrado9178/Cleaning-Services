@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Lato", sans-serif;
   background: url(/assets/bg-team.jpg) rgba(255, 255, 255, 0.8);
@@ -145,7 +150,7 @@ li {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 9999;
   display: none;
 }
 
@@ -423,12 +428,12 @@ iframe {
 
 .why-us-flex {
   display: flex;
-  gap: 30px;
+  gap: 60px;
 }
 
 .cards {
   position: relative;
-  width: calc(100% - 60px) / 3;
+  width: calc((100% - 40px) / 3);
   text-align: center;
 }
 
